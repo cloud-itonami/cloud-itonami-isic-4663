@@ -1,0 +1,11 @@
+{:itonami.blueprint/id "cloud-itonami-isic-4663"
+ :itonami.blueprint/name "Wholesale of construction materials, hardware, plumbing and heating equipment"
+ :itonami.blueprint/isic-rev5 "4663"
+ :itonami.blueprint/domain :downstream/building-materials-wholesale
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:public-health :safety :transparency]
+ :itonami.blueprint/governor :potable-water-safety-governor
+ :itonami.blueprint/required-technologies [:robotics :identity :forms :dmn :bpmn :audit-ledger :optimization]
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/robotics true
+ :itonami.blueprint/maturity :implemented}
