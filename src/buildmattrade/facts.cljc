@@ -75,6 +75,62 @@
     current 水道法 practice. OFAC等同等制裁プログラム (OFAC-equivalent
     sanctions programs) apply as in every sibling's own
     counterparty-diligence checklist.
+  - BRA (the third seeded jurisdiction, added 2026-07-23 -- and, UNLIKE
+    USA/JPN above, this build could NOT find a Brazilian analog of the
+    domain-defining 'lead-free potable-water-contact material' mandate;
+    see 'BRA coverage gap (honest)' below): INMETRO (Instituto Nacional
+    de Metrologia, Qualidade e Tecnologia) operates the Sistema
+    Brasileiro de Avaliação da Conformidade (SBAC) / Programa de
+    Avaliação da Conformidade (PAC), a compulsory (mandatory)
+    third-party product-certification regime -- this build directly
+    verified, via INMETRO's own official 'Regulamentos Técnicos e
+    Programas de Avaliação da Conformidade Compulsórios' list, TWO
+    building-materials-wholesale-relevant compulsory items: item 12,
+    'Barras e Fios de Aço destinados a Armaduras para Estruturas de
+    Concreto Armado' (reinforcing steel bars/wire for concrete
+    structures), Portaria Inmetro n.° 139 de 19/03/2021; and item 41,
+    'Conexões de Ferro Fundido Maleável para a Condução de Fluidos'
+    (malleable cast-iron pipe fittings for fluid conduction), Portaria
+    Inmetro n.° 390 de 21/09/2021 -- both mechanism 'Certificação',
+    órgão regulamentador 'Inmetro', tipo 'PAC'. Additionally, Código de
+    Defesa do Consumidor (Consumer Protection Code, Lei n.° 8.078 de 11
+    de setembro de 1990) Art. 31 requires 'informações corretas, claras,
+    precisas, ostensivas e em língua portuguesa' (correct, clear,
+    precise, conspicuous, Portuguese-language information) -- including
+    composition, quantity, origin, and health/safety risks -- on the
+    offer/presentation of ANY product sold in Brazil, verified directly
+    at the official planalto.gov.br compiled-law text. OFAC-equivalent
+    sanctions programs apply as in every sibling's own
+    counterparty-diligence checklist.
+
+    **BRA coverage gap (honest):** this build's attempt to find a
+    Brazilian standard specifically limiting LEAD CONTENT in
+    potable-water-contact pipes/pipe fittings/plumbing fixtures --
+    structurally analogous to the US Reduction of Lead in Drinking Water
+    Act (SDWA §1417) or Japan's 水道法 leaching(浸出) standard, i.e. THIS
+    vertical's own domain-defining regulatory content -- did NOT
+    succeed, and this gap is disclosed rather than papered over with a
+    guess: (1) this build directly read INMETRO's own current compulsory-
+    certification list end-to-end this session and confirmed it contains
+    NO PVC-pipe / potable-water-pipe / plumbing-fixture entry of any
+    kind (only the two construction-material items cited above); (2)
+    this build's attempt to independently fetch ANVISA/Ministério da
+    Saúde's water-potability consolidation ordinance (Portaria de
+    Consolidação n.° 5/2017, GM/MS, Anexo XX) to check whether it reaches
+    materials (as opposed to only water-quality parameters) failed this
+    session (connection reset by the host, and no Internet Archive
+    Wayback Machine snapshot of that exact URL was available) -- so this
+    build neither confirms nor denies that angle, it discloses the
+    source as unreachable. Consequently this catalog entry's
+    `:required-evidence` is, honestly, the SAME generic
+    counterparty-diligence set as every other jurisdiction and does NOT
+    imply BRA has (or lacks) a lead-free-certification-equivalent regime
+    -- `buildmattrade.governor`'s own `lead-free-certification-missing`
+    check remains scoped to the facts actually on a `building-order`
+    record (`:potable-water-contact?` etc.), independent of jurisdiction,
+    so this gap does not weaken that check; it only means this build
+    cannot cite a BRA-specific STATUTORY analog for it the way it can
+    for USA/JPN.
 
   The required-evidence set (credit-clearance record, contract/PO,
   sanctions-screening (OFAC/equivalent) record) mirrors the GENERIC
@@ -110,6 +166,13 @@
           :owner-authority "厚生労働省 (MHLW, historically) -- 水道法 Article 16 給水装置の构造材质基准"
           :legal-basis "水道法 (Waterworks Act, Act No. 177 of 1957) Article 16; 给水装置の构造及び材质の基准に关する省令 (平成9年厚生省令第14号, 1997) -- 浸出(leaching)性能基准 limiting lead and other substances from potable-water-contact materials; JWWA规格适合品 third-party certification mark (日本水道协会); OFAC等同等制裁プログラム"
           :provenance "https://www.mhlw.go.jp/"
+          :required-evidence ["credit-clearance record"
+                              "contract/PO"
+                              "sanctions-screening (OFAC/equivalent) record"]}
+   "BRA" {:name "BRA"
+          :owner-authority "INMETRO (Instituto Nacional de Metrologia, Qualidade e Tecnologia) -- Sistema Brasileiro de Avaliação da Conformidade (SBAC), Programa de Avaliação da Conformidade (PAC) compulsory product certification"
+          :legal-basis "Sistema Brasileiro de Avaliação da Conformidade (SBAC) / Programa de Avaliação da Conformidade (PAC), administered by INMETRO: compulsory third-party certification confirmed for 'Barras e Fios de Aço destinados a Armaduras para Estruturas de Concreto Armado' (reinforcing steel bars/wire for concrete structures, Portaria Inmetro n.° 139 de 19/03/2021) and 'Conexões de Ferro Fundido Maleável para a Condução de Fluidos' (malleable cast-iron pipe fittings for fluid conduction, Portaria Inmetro n.° 390 de 21/09/2021); Código de Defesa do Consumidor (Lei n.° 8.078/1990) Art. 31 requires correct, clear, precise, conspicuous, Portuguese-language information (composition, quantity, origin, health/safety risks) on any product offered for sale; OFAC-equivalent sanctions programs apply as in every sibling's own counterparty-diligence checklist. Does NOT include a lead-content/lead-free potable-water-contact-materials mandate -- this build could not verify one exists; see namespace docstring 'BRA coverage gap (honest)' for the full disclosure of what was and was not independently confirmed"
+          :provenance "https://web.archive.org/web/20250526132136/http://inmetro.gov.br/qualidade/rtepac/compulsorios.asp"
           :required-evidence ["credit-clearance record"
                               "contract/PO"
                               "sanctions-screening (OFAC/equivalent) record"]}})
