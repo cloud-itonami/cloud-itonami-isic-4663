@@ -266,15 +266,17 @@ pattern this repo's flagship ops already establish.
 
 `buildmattrade.facts/coverage` reports how many requested jurisdictions
 actually have an official spec-basis in `buildmattrade.facts/catalog`
--- currently 2 seeded (USA, JPN) out of ~194 jurisdictions worldwide.
-This is a starting catalog to prove the governor contract end-to-end,
-not a claim of global coverage. Adding a jurisdiction is additive: one
-map entry in `buildmattrade.facts/catalog`, citing a real official
-source -- never fabricate a jurisdiction's requirements to make
+-- currently 4 seeded (USA, JPN, BRA, AUS) out of ~194 jurisdictions
+worldwide. This is a starting catalog to prove the governor contract
+end-to-end, not a claim of global coverage. Adding a jurisdiction is
+additive: one map entry in `buildmattrade.facts/catalog`, citing a real
+official source -- never fabricate a jurisdiction's requirements to make
 coverage look bigger. See `docs/business-model.md` "Jurisdiction
 coverage (honest)" for this build's own confidence caveats on specific
 citations (independent verification recommended before operational
-reliance, especially for the JPN entry).
+reliance, especially for the JPN entry, and see the facts.cljc namespace
+docstring for the BRA lead-free coverage gap and the AUS verification
+notes).
 
 ## Maturity
 

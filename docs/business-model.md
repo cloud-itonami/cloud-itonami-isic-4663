@@ -320,11 +320,11 @@ boolean reads.
 
 ## Jurisdiction coverage (honest)
 
-`buildmattrade.facts/catalog` currently seeds 2 jurisdictions with an
-official spec-basis: the United States and Japan. This is a starting
-catalog to prove the governor contract end-to-end, not a claim of
-global coverage (2 of ~194 jurisdictions worldwide). Adding a
-jurisdiction is additive: one map entry in `buildmattrade.facts/
+`buildmattrade.facts/catalog` currently seeds 4 jurisdictions with an
+official spec-basis: the United States, Japan, Brazil and Australia.
+This is a starting catalog to prove the governor contract end-to-end,
+not a claim of global coverage (4 of ~194 jurisdictions worldwide).
+Adding a jurisdiction is additive: one map entry in `buildmattrade.facts/
 catalog`, citing a real official source -- never fabricate a
 jurisdiction's requirements to make coverage look bigger.
 
@@ -366,6 +366,47 @@ discipline every sibling's own facts namespace follows):**
   also of MODERATE confidence -- NOT independently confirmed as the
   exclusive or mandatory conformity route under current 水道法 practice
   (as opposed to one of several accepted routes).
+- **BRA (added 2026-07-23 -- coverage gap disclosed, not papered over).**
+  This build directly verified INMETRO's Sistema Brasileiro de Avaliação
+  da Conformidade (SBAC) / Programa de Avaliação da Conformidade (PAC)
+  compulsory certification for two building-materials items (reinforcing
+  steel bars/wire, Portaria Inmetro n.° 139/2021; malleable cast-iron
+  pipe fittings, Portaria Inmetro n.° 390/2021) and the Código de Defesa
+  do Consumidor (Lei n.° 8.078/1990) Art. 31 labeling requirement -- HIGH
+  confidence, both fetched and read directly. This build did NOT find a
+  Brazilian analog of the domain-defining lead-free potable-water-contact-
+  material mandate (structurally analogous to USA's SDWA §1417 or JPN's
+  水道法 leaching standard); the ANVISA/MS water-potability ordinance this
+  build tried to check for a materials angle was unreachable this session
+  (connection reset, no Wayback snapshot) -- see `buildmattrade.facts`
+  namespace docstring "BRA coverage gap (honest)" for the full disclosure.
+- **AUS (added 2026-07-23 -- HIGH confidence, and unlike BRA, a domain-
+  defining lead-free mandate WAS found and independently verified).**
+  National Construction Code (NCC) Volume Three -- the Plumbing Code of
+  Australia (PCA) 2022 -- Clause A5G4 defines 'lead free' as a weighted
+  average lead content of not more than 0.25% for any plumbing product or
+  material in contact with drinking water, enforced via the Australian
+  Building Codes Board (ABCB)'s mandatory WaterMark Certification Scheme.
+  This build fetched and read this definition verbatim directly from two
+  live ABCB pages (watermark.abcb.gov.au/certification/lead-free-plumbing-
+  products and abcb.gov.au/news/2026/update-transition-lead-free-plumbing-
+  products), and independently corroborated it via the National Health and
+  Medical Research Council (NHMRC)'s Australian Drinking Water Guidelines
+  Q&A page, which states this same PCA 2022 definition "aligns... with the
+  United States Safe Drinking Water Act" and separately reports the ADWG's
+  own health-based drinking-water guideline value for lead was lowered
+  from 0.01 mg/L (1996) to 0.005 mg/L (June 2025 update). The NHMRC page
+  itself was unreachable live this session (connection reset) and was
+  instead fetched and read via an Internet Archive Wayback Machine
+  snapshot -- flagged, not hidden. This build did NOT confirm whether
+  AS/NZS 4020 is formally invoked for the lead-free determination
+  specifically (the ABCB pages define "lead free" directly via Clause
+  A5G4's own wording and never name AS/NZS 4020; Standards Australia
+  paywalls the standard text itself), and did NOT independently cite a
+  specific Australian sanctions statute (DFAT's sanctions page was
+  unreachable live and had no Wayback snapshot this session) -- see
+  `buildmattrade.facts` namespace docstring "AUS verification notes
+  (honest)" for the full disclosure.
 - **No second jurisdiction-agnostic heating-equipment-certification
   entry seeded.** As explained above ("Type-gating, and why this build
   did NOT add a second check for heating equipment"), this build's
