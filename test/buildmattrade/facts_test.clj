@@ -23,20 +23,43 @@
             "sanctions-screening (OFAC/equivalent) record"]
            (:required-evidence bra)))))
 
+(deftest aus-has-a-spec-basis-with-the-same-shape-as-usa-jpn-bra
+  ;; the fourth seeded jurisdiction (Australia, added 2026-07-23) must have
+  ;; the SAME map shape as USA/JPN/BRA -- :name/:owner-authority/:legal-basis/
+  ;; :provenance/:required-evidence -- and a real (non-fabricated)
+  ;; official-source provenance, following the same catalog discipline.
+  ;; Unlike BRA, this build DID find and verify Australia's own domain-
+  ;; defining lead-free potable-water-contact material mandate (NCC
+  ;; Volume Three / Plumbing Code of Australia Clause A5G4, 0.25%
+  ;; weighted-average lead content, enforced via ABCB's WaterMark
+  ;; Certification Scheme).
+  (let [aus (facts/spec-basis "AUS")]
+    (is (some? aus))
+    (is (= "AUS" (:name aus)))
+    (is (string? (:owner-authority aus)))
+    (is (string? (:legal-basis aus)))
+    (is (string? (:provenance aus)))
+    (is (re-find #"abcb" (:provenance aus)) "provenance cites the ABCB WaterMark Scheme, the verified official source")
+    (is (re-find #"0\.25%" (:legal-basis aus)) "legal-basis cites the weighted-average lead-content threshold")
+    (is (= ["credit-clearance record"
+            "contract/PO"
+            "sanctions-screening (OFAC/equivalent) record"]
+           (:required-evidence aus)))))
+
 (deftest all-seeded-jurisdictions-have-required-evidence
   ;; every seeded building-materials-wholesale jurisdiction actually has
   ;; a real required-evidence set reported honestly here
-  (doseq [iso3 ["USA" "JPN" "BRA"]]
+  (doseq [iso3 ["USA" "JPN" "BRA" "AUS"]]
     (is (seq (facts/evidence-checklist iso3)) (str iso3 " required-evidence"))))
 
 (deftest unknown-jurisdiction-has-no-fabricated-spec-basis
   (is (nil? (facts/spec-basis "ATL"))))
 
 (deftest coverage-never-reports-a-missing-jurisdiction-as-covered
-  (let [report (facts/coverage ["USA" "ATL" "JPN" "BRA"])]
-    (is (= 3 (:covered report)))
+  (let [report (facts/coverage ["USA" "ATL" "JPN" "BRA" "AUS"])]
+    (is (= 4 (:covered report)))
     (is (= ["ATL"] (:missing-jurisdictions report)))
-    (is (= ["BRA" "JPN" "USA"] (:covered-jurisdictions report)))))
+    (is (= ["AUS" "BRA" "JPN" "USA"] (:covered-jurisdictions report)))))
 
 (deftest required-evidence-satisfied-needs-every-item
   (let [all (facts/evidence-checklist "USA")]
@@ -50,5 +73,5 @@
   ;; lead-free-certification is never a checklist entry, it is its own
   ;; dedicated governor check (see buildmattrade.governor namespace
   ;; docstring)
-  (doseq [iso3 ["USA" "JPN" "BRA"]]
+  (doseq [iso3 ["USA" "JPN" "BRA" "AUS"]]
     (is (= 3 (count (facts/evidence-checklist iso3))) (str iso3 " checklist length"))))

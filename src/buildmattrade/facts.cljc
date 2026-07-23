@@ -132,6 +132,75 @@
     cannot cite a BRA-specific STATUTORY analog for it the way it can
     for USA/JPN.
 
+  - AUS (the fourth seeded jurisdiction, added 2026-07-23 -- and, LIKE
+    USA, this build DID find and directly verify Australia's own
+    domain-defining 'lead-free potable-water-contact material' mandate):
+    the National Construction Code (NCC) Volume Three -- the Plumbing
+    Code of Australia (PCA) 2022 -- Clause A5G4 defines 'lead free' as
+    'where a plumbing product or material in contact with drinking water
+    has a weighted average lead content of not more than 0.25%', text
+    this build fetched and read verbatim directly from the Australian
+    Building Codes Board (ABCB)'s own live WaterMark Certification
+    Scheme site (watermark.abcb.gov.au/certification/lead-free-plumbing-
+    products), independently corroborated on a second live ABCB page
+    (abcb.gov.au/news/2026/update-transition-lead-free-plumbing-products,
+    dated 19 May 2026). Compliance is mandatory and enforced via the
+    WaterMark Certification Scheme (a Lead Free WaterMark trademark
+    applied to compliant copper-alloy products): manufacturers may
+    produce ONLY Lead Free WaterMark-certified copper-alloy plumbing
+    products intended to convey drinking water from 1 May 2026, and (per
+    ABCB's own December 2025 extension, confirmed on both live pages
+    fetched) the installation transition period for pre-existing
+    WaterMark-certified stock runs to 30 April 2028 / 1 May 2028 (the two
+    live ABCB pages this build fetched give 30 April 2028 and 1 May 2028
+    respectively for the SAME transition-end milestone -- this build
+    reports both dates as fetched rather than silently picking one),
+    after which only Lead Free WaterMark-marked products are authorised
+    for installation. State/territory legislation governs actual NCC
+    enforcement and MAY vary these transition dates -- this is the
+    ABCB's OWN caveat, not this build's uncertainty. Independently
+    corroborated on a SEPARATE Australian government authority's own
+    site: the National Health and Medical Research Council (NHMRC)'s
+    Australian Drinking Water Guidelines (ADWG) Questions and Answers
+    page states this SAME PCA 2022 weighted-average 0.25% definition
+    'aligns the Plumbing Code of Australia 2022 with the United States
+    Safe Drinking Water Act and other international codes' -- confirming,
+    from Australia's OWN health regulator, the exact structural link to
+    this catalog's USA entry. That NHMRC page also separately reports
+    the ADWG's health-based drinking-water GUIDELINE VALUE for lead (a
+    water-QUALITY parameter, distinct from the PCA's material-CONTENT
+    standard) was lowered from 0.01 mg/L (endorsed 1996) to 0.005 mg/L in
+    a June 2025 ADWG update. OFAC-equivalent Australian sanctions
+    programs (administered by the Department of Foreign Affairs and
+    Trade) apply as in every sibling's own counterparty-diligence
+    checklist.
+
+    **AUS verification notes (honest):** the live nhmrc.gov.au and
+    dfat.gov.au hosts both failed to connect directly this session
+    (connection reset/timeout -- the SAME class of failure the BRA
+    entry's ANVISA/MS attempt hit above) -- the NHMRC content above was
+    fetched and read via an Internet Archive Wayback Machine snapshot
+    instead (https://web.archive.org/web/20260521074341/https://www.nhmrc.gov.au/about-us/publications/australian-drinking-water-guidelines/questions-and-answers/lead-replacement-plumbing-products-lead-and-manganese),
+    not the live site, and the DFAT sanctions clause is stated as the
+    same unverified boilerplate the JPN/BRA entries already carry (no
+    live source reachable and no Wayback snapshot existed for a DFAT
+    sanctions page this session -- this build did NOT independently cite
+    a specific Australian sanctions statute by name for that reason).
+    This build also did NOT confirm whether AS/NZS 4020 (Testing of
+    products for use in contact with drinking water) is formally invoked
+    for the lead-free determination specifically -- the two ABCB pages
+    fetched define 'lead free' directly via Clause A5G4's own
+    weighted-average-content wording and never mention AS/NZS 4020 by
+    name, and Standards Australia paywalls the standard text itself, so
+    this build cites the PCA/WaterMark mandate ABCB itself publishes
+    rather than guessing at AS/NZS 4020's exact role. Nor did this build
+    fetch the WaterMark Schedule of Products itself to confirm the
+    complete list of product types the lead-free requirement applies to
+    -- the ABCB page states the Schedule 'identifies which product types
+    must comply', implying the requirement is scoped by product type
+    rather than blanket, but this build did not independently enumerate
+    that scope.
+
   The required-evidence set (credit-clearance record, contract/PO,
   sanctions-screening (OFAC/equivalent) record) mirrors the GENERIC
   counterparty-diligence evidence every principal-trading sibling's own
@@ -173,6 +242,13 @@
           :owner-authority "INMETRO (Instituto Nacional de Metrologia, Qualidade e Tecnologia) -- Sistema Brasileiro de Avaliação da Conformidade (SBAC), Programa de Avaliação da Conformidade (PAC) compulsory product certification"
           :legal-basis "Sistema Brasileiro de Avaliação da Conformidade (SBAC) / Programa de Avaliação da Conformidade (PAC), administered by INMETRO: compulsory third-party certification confirmed for 'Barras e Fios de Aço destinados a Armaduras para Estruturas de Concreto Armado' (reinforcing steel bars/wire for concrete structures, Portaria Inmetro n.° 139 de 19/03/2021) and 'Conexões de Ferro Fundido Maleável para a Condução de Fluidos' (malleable cast-iron pipe fittings for fluid conduction, Portaria Inmetro n.° 390 de 21/09/2021); Código de Defesa do Consumidor (Lei n.° 8.078/1990) Art. 31 requires correct, clear, precise, conspicuous, Portuguese-language information (composition, quantity, origin, health/safety risks) on any product offered for sale; OFAC-equivalent sanctions programs apply as in every sibling's own counterparty-diligence checklist. Does NOT include a lead-content/lead-free potable-water-contact-materials mandate -- this build could not verify one exists; see namespace docstring 'BRA coverage gap (honest)' for the full disclosure of what was and was not independently confirmed"
           :provenance "https://web.archive.org/web/20250526132136/http://inmetro.gov.br/qualidade/rtepac/compulsorios.asp"
+          :required-evidence ["credit-clearance record"
+                              "contract/PO"
+                              "sanctions-screening (OFAC/equivalent) record"]}
+   "AUS" {:name "AUS"
+          :owner-authority "Australian Building Codes Board (ABCB) -- WaterMark Certification Scheme, administering the National Construction Code (NCC) Volume Three / Plumbing Code of Australia (PCA) 2022"
+          :legal-basis "National Construction Code (NCC) Volume Three, Plumbing Code of Australia (PCA) 2022, Clause A5G4: 'lead free' is defined as a plumbing product or material in contact with drinking water having a weighted average lead content of not more than 0.25%, enforced via the mandatory WaterMark Certification Scheme (Lead Free WaterMark trademark); manufacturers may produce ONLY Lead Free WaterMark-certified copper-alloy plumbing products intended to convey drinking water from 1 May 2026, with an installation transition period for pre-existing WaterMark-certified stock (extended by ABCB in December 2025) running to 30 April 2028 / 1 May 2028, after which only Lead Free WaterMark-marked products are authorised for installation (state/territory legislation governs actual NCC enforcement and may vary these dates). Independently corroborated by the National Health and Medical Research Council (NHMRC)'s Australian Drinking Water Guidelines (ADWG), which states this PCA 2022 weighted-average 0.25% definition 'aligns the Plumbing Code of Australia 2022 with the United States Safe Drinking Water Act and other international codes', and which separately lowered its own health-based drinking-water guideline value for lead from 0.01 mg/L (1996) to 0.005 mg/L (June 2025 update) -- a water-quality parameter distinct from the PCA's material-content standard. OFAC-equivalent Australian sanctions programs (Department of Foreign Affairs and Trade) apply as in every sibling's own counterparty-diligence checklist"
+          :provenance "https://watermark.abcb.gov.au/certification/lead-free-plumbing-products"
           :required-evidence ["credit-clearance record"
                               "contract/PO"
                               "sanctions-screening (OFAC/equivalent) record"]}})
