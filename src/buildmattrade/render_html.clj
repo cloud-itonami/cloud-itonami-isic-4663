@@ -458,12 +458,23 @@
      (when (seq volatile-only)
        (str "The approver IS present in " (esc (str/join ", " (map :label volatile-only)))
             ", which is discarded when the graph run ends. "))
-     "So for those surfaces a reader cannot distinguish "
-     "&quot;nobody approved this&quot; from &quot;the store did not keep who approved it&quot; "
-     "&mdash; the ledger row shows <code>:committed</code> either way. "
-     "This is disclosed, NOT patched: changing what <code>commit-record!</code> reads, or what "
-     "the commit node appends, is a governance change with its own contract tests "
-     "(<code>test/buildmattrade/store_contract_test.clj</code>), not a rendering decision.</p>\n")))
+     ;; The CONCLUSION is derived too, not just the counts. An earlier
+     ;; draft printed the "cannot distinguish" sentence unconditionally,
+     ;; which meant the page would have kept asserting the defect even
+     ;; after the defect was fixed -- a disclosure that reads the same in
+     ;; both directions discloses nothing.
+     (if (seq without)
+       (str "So for those surfaces a reader cannot distinguish "
+            "&quot;nobody approved this&quot; from &quot;the store did not keep who approved it&quot; "
+            "&mdash; the ledger row shows <code>:committed</code> either way. "
+            "This is disclosed, NOT patched: changing what <code>commit-record!</code> reads, or what "
+            "the commit node appends, is a governance change with its own contract tests "
+            "(<code>test/buildmattrade/store_contract_test.clj</code>), not a rendering decision.")
+       (str "Every non-empty persisted surface carries the approver, so a reader CAN always "
+            "distinguish &quot;nobody approved this&quot; from &quot;the store did not keep who "
+            "approved it&quot;. This sentence is derived from the scan above: it reverts by itself "
+            "if a future change stops retaining attribution."))
+     "</p>\n")))
 
 ;; ----------------------------- stylesheet -----------------------------
 
