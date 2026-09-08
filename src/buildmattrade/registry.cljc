@@ -30,7 +30,7 @@
   real invoice itself (that is `buildmattrade.operation`'s
   `:delivery/dispatch`/`:invoice/settle`, always human-gated -- see
   README `Actuation`)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- unsigned-certificate
   "Every certificate this actor produces is UNSIGNED -- signature is
@@ -67,7 +67,7 @@
     (throw (ex-info "building-materials-dispatch: jurisdiction required" {})))
   (when (< sequence 0)
     (throw (ex-info "building-materials-dispatch: sequence must be >= 0" {})))
-  (let [dispatch-number (str (str/upper-case jurisdiction) "-DISPATCH-" (zero-pad sequence 6))
+  (let [dispatch-number (str (str/upper jurisdiction) "-DISPATCH-" (zero-pad sequence 6))
         record {"record_id" dispatch-number
                 "kind" "building-materials-dispatch-draft"
                 "building_order_id" building-order-id
@@ -93,7 +93,7 @@
     (throw (ex-info "building-materials-invoice: jurisdiction required" {})))
   (when (< sequence 0)
     (throw (ex-info "building-materials-invoice: sequence must be >= 0" {})))
-  (let [invoice-number (str (str/upper-case jurisdiction) "-INVOICE-" (zero-pad sequence 6))
+  (let [invoice-number (str (str/upper jurisdiction) "-INVOICE-" (zero-pad sequence 6))
         record {"record_id" invoice-number
                 "kind" "building-materials-invoice-draft"
                 "building_order_id" building-order-id
