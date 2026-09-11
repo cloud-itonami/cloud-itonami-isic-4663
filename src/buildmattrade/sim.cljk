@@ -1,5 +1,5 @@
 (ns buildmattrade.sim
-  "Demo driver -- `clojure -M:dev:run`. Walks a clean potable-water-
+  "Demo driver -- `kbb -M:dev:run`. Walks a clean potable-water-
   contact plumbing order through intake -> certification verification ->
   physical dispatch (escalate/approve/commit) -> invoice settlement
   (escalate/approve/commit), an ordinary construction-material order

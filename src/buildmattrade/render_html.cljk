@@ -28,7 +28,7 @@
   build-time invariant here rather than a convention someone has to
   remember.
 
-  Usage: `clojure -M:dev:render-html [out-file]`
+  Usage: `kbb -M:dev:render-html [out-file]`
   (default `docs/samples/operator-console.html`)."
   (:require [kotoba.lang.text :as str]
             [buildmattrade.facts :as facts]
