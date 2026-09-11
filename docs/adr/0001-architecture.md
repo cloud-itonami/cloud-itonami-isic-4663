@@ -354,9 +354,9 @@ true`, and `:required-technologies` includes `:robotics`.
   did not support one.
 - `MemStore` || `DatomicStore` parity is proven by
   `test/buildmattrade/store_contract_test.cljk`.
-- Lint is clean; `clojure -M:dev:test` passes with 0 failures (see
+- Lint is clean; `kbb -M:dev:test` passes with 0 failures (see
   repository test-run output for current counts); the demo
-  (`clojure -M:dev:run`) walks one clean dispatch + invoice lifecycle,
+  (`kbb -M:dev:run`) walks one clean dispatch + invoice lifecycle,
   the type-gating control pair (`bo-1`/`bo-8`), the satisfiable-
   certification proof (`bo-6`), plus six other HARD-hold scenarios,
   end-to-end.

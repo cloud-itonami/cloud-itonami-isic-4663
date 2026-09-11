@@ -112,7 +112,7 @@ this build considered and rejected modeling it as a post-hoc, re-checked
 flag (the shape a sibling actor uses for a genuinely different,
 discovered-defect regulatory concern).
 
-## Feel the Decision Gate: `clojure -M:dev:run`
+## Feel the Decision Gate: `kbb -M:dev:run`
 
 This vertical has no companion playable prototype. The fastest hands-on
 way to feel why the `:potable-water-safety-governor` gate exists is the

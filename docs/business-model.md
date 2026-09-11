@@ -419,7 +419,7 @@ discipline every sibling's own facts namespace follows):**
 ## Maturity
 
 `:implemented` -- `BuildMatTradeAdvisor` + `Potable Water Safety
-Governor` run as real, tested code (`clojure -M:dev:test`; lint clean),
+Governor` run as real, tested code (`kbb -M:dev:test`; lint clean),
 following the SAME governed-actor architecture as the other prior
 actors across this fleet, with its own distinct, independently-named
 governor and its own direct-entity-boolean building-materials-trading

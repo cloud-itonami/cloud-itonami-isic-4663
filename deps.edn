@@ -26,9 +26,9 @@
   :dev {:override-deps
         {io.github.kotoba-lang/langchain
          {:local/root "../../kotoba-lang/langchain"}}}
-  ;; clojure -M:dev:run  -> drive the demo through one OperationActor
+  ;; kbb -M:dev:run  -> drive the demo through one OperationActor
   :run {:main-opts ["-m" "buildmattrade.sim"]}
-  ;; clojure -M:dev:render-html -> drive the REAL actor stack through a
+  ;; kbb -M:dev:render-html -> drive the REAL actor stack through a
   ;; scenario and generate docs/samples/operator-console.html from what
   ;; the run actually produced. Refuses to write the page if the run
   ;; produced zero :governor-hold facts.
