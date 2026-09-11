@@ -73,7 +73,7 @@ Construction Materials, Hardware, Plumbing and Heating Equipment, ISIC
 (`:public-health`, `:safety`, `:transparency`).
 
 This is the rule the companion contract test
-(`test/buildmattrade/governor_contract_test.clj`) encodes end-to-end:
+(`test/buildmattrade/governor_contract_test.cljk`) encodes end-to-end:
 the BuildMatTradeAdvisor never dispatches building materials to a
 counterparty or settles an invoice the Potable Water Safety Governor
 would reject, `:delivery/dispatch` and `:invoice/settle` NEVER

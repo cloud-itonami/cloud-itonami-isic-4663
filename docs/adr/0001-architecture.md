@@ -239,7 +239,7 @@ discipline every prior governor's guards establish, informed by
 `buildmattrade.store/Store` is implemented by both `MemStore` (atom-
 backed, default for dev/tests/demo) and `DatomicStore`
 (`langchain.db`-backed), proven to satisfy the same contract in
-`test/buildmattrade/store_contract_test.clj`. The ledger stays
+`test/buildmattrade/store_contract_test.cljk`. The ledger stays
 append-only on every backend: which building-order was verified for a
 jurisdiction with no official spec-basis, which counterparty had
 credit-uncleared / no contract / a missing lead-free certification / an
@@ -353,7 +353,7 @@ true`, and `:required-technologies` includes `:robotics`.
   decision NOT to add a second domain check where citation confidence
   did not support one.
 - `MemStore` || `DatomicStore` parity is proven by
-  `test/buildmattrade/store_contract_test.clj`.
+  `test/buildmattrade/store_contract_test.cljk`.
 - Lint is clean; `clojure -M:dev:test` passes with 0 failures (see
   repository test-run output for current counts); the demo
   (`clojure -M:dev:run`) walks one clean dispatch + invoice lifecycle,

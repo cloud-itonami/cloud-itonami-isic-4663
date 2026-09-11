@@ -84,7 +84,7 @@ layers enforce this (`buildmattrade.governor`'s `:delivery/dispatch`/
 `:invoice/settle` high-stakes gate and `buildmattrade.phase`'s phase
 table, which never puts either op in any phase's `:auto` set) -- see
 `buildmattrade.phase`'s docstring and
-`test/buildmattrade/phase_test.clj`'s
+`test/buildmattrade/phase_test.cljk`'s
 `delivery-dispatch-never-auto-at-any-phase`/
 `invoice-settle-never-auto-at-any-phase`. The actor may draft, check
 and recommend; a human trading supervisor is always the one who
@@ -232,14 +232,14 @@ robotics/identity/forms/dmn/bpmn/audit-ledger stack.
 
 | File | Role |
 |---|---|
-| `src/buildmattrade/store.cljc` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + dispatch AND invoice history (dual history). The double-actuation guard checks dedicated `:dispatched?`/`:invoiced?` booleans rather than a `:status` value |
-| `src/buildmattrade/registry.cljc` | Dispatch/invoice draft records (record construction only -- the Potable Water Safety Governor's checks are direct entity boolean reads, so there are no pure range-check functions to host here) |
-| `src/buildmattrade/facts.cljc` | Per-jurisdiction generic counterparty-diligence catalog with an official spec-basis citation per entry, honest coverage reporting |
-| `src/buildmattrade/buildmattradeadvisor.cljc` | **BuildMatTradeAdvisor** -- `mock-advisor` ‖ `llm-advisor`; intake/certification-verification/dispatch/invoice proposals |
-| `src/buildmattrade/governor.cljc` | **Potable Water Safety Governor** -- 6 HARD checks (spec-basis · evidence-incomplete · credit-uncleared · contract-missing · lead-free-certification-missing · counterparty-sanctions-flag-unresolved) + 2 double-actuation guards + 1 soft (confidence/actuation gate) |
-| `src/buildmattrade/phase.cljc` | **Phase 0→3** -- read-only → assisted intake → assisted verify → supervised (dispatch/invoice always human; order intake is the ONLY auto-eligible op, no direct capital risk) |
-| `src/buildmattrade/operation.cljc` | **OperationActor** -- langgraph StateGraph |
-| `src/buildmattrade/sim.cljc` | demo driver |
+| `src/buildmattrade/store.cljk` | **Store** protocol -- `MemStore` ‖ `DatomicStore` (`langchain.db`) + append-only audit ledger + dispatch AND invoice history (dual history). The double-actuation guard checks dedicated `:dispatched?`/`:invoiced?` booleans rather than a `:status` value |
+| `src/buildmattrade/registry.cljk` | Dispatch/invoice draft records (record construction only -- the Potable Water Safety Governor's checks are direct entity boolean reads, so there are no pure range-check functions to host here) |
+| `src/buildmattrade/facts.cljk` | Per-jurisdiction generic counterparty-diligence catalog with an official spec-basis citation per entry, honest coverage reporting |
+| `src/buildmattrade/buildmattradeadvisor.cljk` | **BuildMatTradeAdvisor** -- `mock-advisor` ‖ `llm-advisor`; intake/certification-verification/dispatch/invoice proposals |
+| `src/buildmattrade/governor.cljk` | **Potable Water Safety Governor** -- 6 HARD checks (spec-basis · evidence-incomplete · credit-uncleared · contract-missing · lead-free-certification-missing · counterparty-sanctions-flag-unresolved) + 2 double-actuation guards + 1 soft (confidence/actuation gate) |
+| `src/buildmattrade/phase.cljk` | **Phase 0→3** -- read-only → assisted intake → assisted verify → supervised (dispatch/invoice always human; order intake is the ONLY auto-eligible op, no direct capital risk) |
+| `src/buildmattrade/operation.cljk` | **OperationActor** -- langgraph StateGraph |
+| `src/buildmattrade/sim.cljk` | demo driver |
 | `test/buildmattrade/*_test.clj` | governor contract · phase invariants · store parity · registry conformance · facts coverage |
 
 ## Business-process coverage (honest)
