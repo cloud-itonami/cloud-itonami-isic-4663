@@ -469,7 +469,7 @@
             "&mdash; the ledger row shows <code>:committed</code> either way. "
             "This is disclosed, NOT patched: changing what <code>commit-record!</code> reads, or what "
             "the commit node appends, is a governance change with its own contract tests "
-            "(<code>test/buildmattrade/store_contract_test.clj</code>), not a rendering decision.")
+            "(<code>test/buildmattrade/store_contract_test.cljk</code>), not a rendering decision.")
        (str "Every non-empty persisted surface carries the approver, so a reader CAN always "
             "distinguish &quot;nobody approved this&quot; from &quot;the store did not keep who "
             "approved it&quot;. This sentence is derived from the scan above: it reverts by itself "
