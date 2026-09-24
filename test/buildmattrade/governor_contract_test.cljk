@@ -17,7 +17,7 @@
   contact product dispatches cleanly; an UNcertified potable-water-
   contact product HARD-holds) -- not a blanket certificate
   requirement."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [buildmattrade.store :as store]
             [buildmattrade.operation :as op]))

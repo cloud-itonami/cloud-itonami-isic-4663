@@ -1,5 +1,5 @@
 (ns buildmattrade.registry-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [buildmattrade.registry :as r]))
 
 ;; The building-materials-wholesale domain checks (credit-clearance,
