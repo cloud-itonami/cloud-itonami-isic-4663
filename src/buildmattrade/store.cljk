@@ -46,7 +46,7 @@
   the audit trail a regulator, a counterparty, or an operator trusting a
   building-materials-wholesale actor needs, and the evidence an operator
   needs if a dispatch or an invoice is later disputed."
-  (:require #?(:clj  [clojure.edn :as edn]
+  (:require #?(:clj  [kotoba.lang.edn :as edn]
                :cljs [cljs.reader :as edn])
             [buildmattrade.registry :as registry]
             [langchain.db :as d]))
