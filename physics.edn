@@ -1,0 +1,33 @@
+;; What this vertical's robot physically does, declared for
+;; kotoba.robotics.process (kotoba-lang/robotics). `kbb -M:dev:physics` runs it.
+;;
+;; README "Robotics premise": an automated racking/stacking crane or gantry
+;; stages pallets, pipe bundles and cartons at the building-materials yard
+;; and distribution-centre dock (ISIC 4663). The physical work: a
+;; side-loader carrying a pipe bundle raised to the racking level, and the
+;; incoming tensile check of reinforcing bar before it is sold.
+;;
+;; Every number without a cited source is marked `estimate` in its :basis.
+;; Replacing an estimate with a sourced value is this bot's growth work.
+{:physics/schema "itonami.physical-ai.spec.v1"
+ :repo "cloud-itonami/cloud-itonami-isic-4663"
+ :cases
+ [{:id :pipe-bundle-raised-in-racking
+   :kind :transport
+   :procedure "side-loader carries a 1.5 t steel pipe bundle along the racking aisle with the load raised toward the rack level and brakes at 2 m/s2"
+   :params {:mass-kg 4000.0 :payload-kg 1500.0 :distance-m 40.0 :v-max-mps 2.0 :a-max-mps2 0.5
+            :brake-decel-mps2 2.0 :drive-force-n 12000.0 :crr 0.02 :cog-height-m 0.70
+            :support-half-length-m 0.75 :max-time-s 1200.0}
+   :sweep {:param :payload-cog-height-m :values [0.5 1.5 2.5 3.5 4.5]}
+   :quantity :min-tipover-margin
+   :limit {:min 0.6 :basis "estimate: stability reserve kept while travelling with a raised long load in the aisle"}
+   :boundary {:lo 0.2 :hi 7.0}}
+  {:id :b500b-rebar-tensile
+   :kind :material
+   :procedure "tensile test of a 12 mm B500B reinforcing-bar sample from an incoming bundle, before the lot is released for sale"
+   :params {:length-m 0.10 :area-m2 1.131e-4 :youngs-modulus-pa 200.0e9 :hardening-pa 1.0e9
+            :density-kg-m3 7850.0 :max-force-n 90000.0}
+   :sweep {:param :yield-stress-pa :values [440.0e6 470.0e6 500.0e6 530.0e6 560.0e6]}
+   :quantity :yield-force-n
+   :limit {:min 56550.0 :basis "EN 10080 grade B500B (as referenced by EN 1992-1-1 Annex C): characteristic yield strength 500 MPa, times the 12 mm bar's 113.1 mm2 nominal section"}
+   :boundary {:lo 350.0e6 :hi 700.0e6}}]}
